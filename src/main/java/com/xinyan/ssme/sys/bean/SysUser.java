@@ -1,0 +1,113 @@
+package com.xinyan.ssme.sys.bean;
+
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+public class SysUser {
+
+	private Integer id;
+	private String account;
+	private String name;
+	private String password;
+	private String gender;
+	private String email;
+	
+	private String testing;// 添加一个String属性
+	private String addr; //地址
+	private String phone ; //电话
+	
+	
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date birthday;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Date create_datetime;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Date modify_datetime;
+	
+	private  int  age ; // 年龄
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	public Date getCreate_datetime() {
+		return create_datetime;
+	}
+
+	public void setCreate_datetime(Date create_datetime) {
+		this.create_datetime = create_datetime;
+	}
+
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	public Date getModify_datetime() {
+		return modify_datetime;
+	}
+
+	public void setModify_datetime(Date modify_datetime) {
+		this.modify_datetime = modify_datetime;
+	}
+
+
+
+}

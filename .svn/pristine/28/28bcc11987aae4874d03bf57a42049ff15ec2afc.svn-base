@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+/*dialog编辑数据窗口样式*/
+.dialog-table{
+	border-collapse:collapse;
+	border-spacing:0;
+	width:97%;
+	margin: 1.2em;
+}
+.dialog-table th,.dialog-table td{
+	border:1px solid #DDD;
+	padding:0.3em 0.7em;
+}
+.dialog-table th{
+	text-align:right;
+	background:#f4f4f4;
+}
